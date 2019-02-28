@@ -1,0 +1,136 @@
+body{
+	width: 1000px;
+	margin:0 auto;
+	text-align:center;
+	position: relative;
+	background-size: 1700px auto;
+}
+table tr{
+	margin: 0px;
+	
+}
+table th{
+	font-weight: 100;
+	width: 80px;
+	height: 70px;
+}
+table td{
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	width: 80px;
+	height: 70px;
+	margin: 10px auto;
+	border: 0px solid  hsla(0,0%,100%,.5);
+}
+
+table{
+	margin: 0 auto;
+	font-size: 20px;
+	display: flex;
+	text-align: center;
+}
+table tbody{
+	margin:0 auto;
+	text-align:center;
+}
+table a{
+	font-weight: 400;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+table div{
+	align-items: stretch;	
+
+}
+
+.no_this_month{
+	color: gray;
+}
+.now_day{
+	border-color:hsla(0,0%,100%,.5); 
+	background-color:hsla(0,0%,100%,.5); 
+}
+#time_clock{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 40px;
+}
+.rest_day{
+	color: rgb(255, 0, 0);
+}
+#date_search{
+	margin-bottom: 20px;
+}
+#button_add{
+	width: 25px;
+	height: 25px;
+}
+.page_go{
+	width: 25px;
+	height: 25px;
+}
+#page_go_right{
+	float: right;
+}
+#page_go_left{
+	float: left;
+}
+#select_part{
+	border-radius: 10px;
+	justify-content:center;
+	background-color:hsla(0,0%,100%,.0);
+}
+#calendar_part{
+	position:absolute;
+    left:100px;
+	width: 600px;
+	border-radius: 10px;
+}
+#aide_memoire{
+	width: 300px;
+	height:600px;
+	position:absolute;
+	left:705px;
+	border: 2px solid hsla(0,0%,100%,.5);
+	border-radius: 10px;
+}
+#on_target_time{
+	padding-top: 10px;
+	margin: 0 auto;
+	height: 50px;
+	border: 2px solidhsla(0,0%,100%,.5);
+	background-color:hsla(0,0%,100%,.5);
+}
+#button_add{
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+#go_to_day_now{
+	border: 0px;
+	border-radius: 20px;
+	background-color:hsla(0,0%,100%,.5);
+
+}
+#time_clock{
+	color: hsla(0,0%,100%,.5);
+}
+#show_list li{
+	margin-top: 5px;
+	cursor:pointer;
+}
+#date_search select{
+	background-color: hsla(0,0%,100%,.5);
+}
+#show_list div input{
+	background-color: hsla(0,0%,100%,.0);
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border: 0px;
+	float: right;
+	margin-top: -19px;
+	width: 20px;
+	height: 20px;
+}

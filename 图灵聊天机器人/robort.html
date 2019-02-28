@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href="decorate.css" rel="stylesheet" type="text/css"/>
+		<title>聊天机器人</title>
+		<script src="https://www.imooc.com/static/lib/jquery/1.9.1/jquery.js" ></script>
+    </head>
+    <body background="18033.jpg">
+        <div >
+            <div id="robort_include">
+                <img src="blblfmj.png">
+                <p>图灵机器人<br><br>智能好用的聊天机器人</p>
+            </div>
+            <div  id="show_talk" ></div>
+            <div id="send_talk">
+                <input type="text" id="message"/>
+                <input type="button" id="send_to" value="发送"/>
+            </div>
+        </div>
+        <script>
+            $("#message").keydown(function(e){
+                if(e.keyCode==13)
+                    $("#send_to").click();
+            })
+            document.getElementById("send_to").onclick=function(){
+               var $message_data=$("#message");
+               var message_data_send=$message_data.val();
+               if(message_data_send!=""){
+                   var cnt=Math.round((Math.random())*10)%5;
+                   var url;
+                   switch(cnt){
+                        case 0:{
+                            url="http://www.tuling123.com/openapi/api?key=9e36f7832ad54dff8fb3634b635147a2&info=";
+                        }   
+                       case 1:{
+                            url="http://www.tuling123.com/openapi/api?key=1f31e50f343842c8811aad1db8616021&info=";
+                       }
+                       case 2:{
+                           url="http://www.tuling123.com/openapi/api?key=1f31e50f343842c8811aad1db8616021&info=";
+                        }
+                        case 3:{
+                            url="http://www.tuling123.com/openapi/api?key=e6b07c0bdd374aebb30e9206756fb08f&info=";
+                        }
+                        case 4:{
+                            url="http://www.tuling123.com/openapi/api?key=dac88edd0be14894991972c851347c33&info=";
+                        }
+                   }
+                    
+                    url+=message_data_send;
+                    $.post(url, function(data){
+                        var get=data
+                        get=get.split("\"text\":")[1];
+                        get=get.split("\"")[1];//机器人的回复
+                        var chat=document.getElementById("show_talk");
+                        var $message_data=$("#message");
+                        var message_data_send=$message_data.val();//发送的消息
+                        
+                        var  newbox=document.createElement("div");
+                        
+                        //创建机器人回复
+                        var robort=document.createElement("div");
+                        robort.setAttribute("class","show_talk_left");
+                        var tempa=document.createElement("p");
+                        tempa.innerText=get;
+                        var pic=document.createElement("img");
+                        pic.setAttribute("src","blblfmj.png");
+                        pic.setAttribute("class","head_sculpture");
+                        robort.appendChild(pic);
+                        robort.appendChild(tempa);
+
+                        //创建本地发送消息
+                        var myword=document.createElement("div");
+                        myword.setAttribute("class","show_talk_right");
+                        var tempb=document.createElement("p");
+                        tempb.innerText=message_data_send;
+                        myword.appendChild(tempb);
+
+                        //将发送和回复装在同一个div
+                        newbox.appendChild(myword);
+                        newbox.appendChild(robort);
+                        
+                        chat.appendChild(newbox);
+                        $message_data.val("");
+                        var div = document.getElementById('show_talk');
+                        div.scrollTop = div.scrollHeight;
+                    },"text");
+               }
+            }
+               
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+body{
+    display: flex;
+    justify-content:center;
+    width:100%;
+	height:100%;
+    background-size:100%;
+}
+body>div{
+    width: 500px;
+}
+#show_talk{
+
+    border: 0px;
+    width:100%;
+    height:500px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    display: flex;
+    flex-direction: column ;
+}
+
+
+#show_talk::-webkit-scrollbar{
+    width: 7px;
+    background-color: hsla(0,0%,100%,.5);
+}
+ 
+#show_talk::-webkit-scrollbar-thumb{
+    background-color: hsla(0,0%,100%,1);
+}
+/*滑块颜色*/
+
+
+#send_talk{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    border: 1px solid rgb(155, 151, 151);
+}
+#send_to{
+    height: 43px;
+    width: 15.5%;
+    float: right;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#message{
+    margin: 0px;
+    padding: 0px;
+    height: 39px;
+    width: 83%;
+    resize:none;
+}
+.show_talk_left{
+    margin-left:5px; 
+    margin-top: 10px;
+    float: left;
+    width: 75%;
+}
+.show_talk_right{
+    margin-right:5px; 
+    margin-top: 10px;
+    width: 75%;
+    float:right;
+}
+.show_talk_left >p{
+    margin: 0px auto;
+    margin-top: 10px;
+    float: left;
+    width: auto;
+    border: 4px solid hsla(0,0%,100%,.0);
+    background-color:  hsla(0,0%,100%,.5);
+    border-radius: 5px; 
+}
+.show_talk_right >p{
+    margin: 0px auto;
+
+    float:right;
+    width: auto;
+    border: 4px solid hsla(0,0%,100%,.0);
+    background-color:  hsla(0,0%,100%,.5);
+    border-radius:5px; 
+}
+.head_sculpture{
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+#robort_include img{
+    float: left;
+}
+#robort_include p{
+    float: left;
+    margin-top: 50px;
+}
