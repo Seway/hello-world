@@ -85,6 +85,8 @@ function calendar_change($year_selected,$month_selected,$blocks){
 		var y=e.target.value;
 		$blocks.empty();
 		(y,$month_selected.val(),$blocks);
+		calendar(y,$month_selected.val(),$blocks);
+
 	});
 	$month_selected.change(function(e){
 		$blocks.removeClass();
